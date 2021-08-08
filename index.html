@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание Linux</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Задание.</h1>
+        <h2>Установка программ в Linux.</h2>
+    <h3>1. Установка через центр приложений.</h3>
+    <div class="main">
+        <hr>
+    <p>В разных дистрибутивах существует несколько разных графических менеджеров пакетов. В Arch Linux и его производных используют <span>Pamac</span>.</p>
+    <p>Открываем Pamac.</p>
+    <img src="./img/Screenshot_20210806_090729.png" alt="Pamac">
+    <p>Выбираем программу иcпользуя фильтры или введя название в строку поиска (можно отметить сразу несколько). Нажимаем  кнопку "Применить".</p>
+    <img src="./img/Screenshot_20210806_105449.png" alt="Pamac">
+    <p>Выберем необязательные компоненты.</p>
+    <img src="./img/Screenshot_20210808_172006.png" alt="optional_components">
+    <p>Введём пароль.</p>
+    <img src="./img/Screenshot_20210808_173707.png" alt="password">
+    <p>Будет показана информация об устанавливаемых пакетах. Нажимаем применить.</p>
+    <img src="./img/Screenshot_20210808_174251.png" alt="summary">
+    <p>Программа установлена.</p>
+    <img src="./img/Screenshot_20210808_175009.png" alt="end">
+    <hr>
+    </div>
+    <h3>2. Установка через терминал.</h3>
+    <div class="main">
+        <hr>
+<p>
+    В различных дистрибутивах для установки пакетов используются менеджеры пакетов. 
+    В Arch Linux установка программ выполняется с помощью <span>Pacman</span>.
+    Откроем терминал и введём команды для установки.
+</p>
+<p>Обновим список пакетов, на всякий случай.</p>
+<code>$ sudo pacman -Sy</code>
+<img src="./img/Screenshot_20210808_184500.png" alt="">
+<p>Установим пару программ.</p>
+<p>Для этого используем команду: 
+    <code>$ sudo pacman -S название_пакета1 название_пакета2 ...</code>
+    (можно устанавливать несколько пакетов сразу.) 
+</p>
+<img src="./img/Screenshot_20210808_194215.png" alt="install">
+<img src="./img/Screenshot_20210808_194055.png" alt="install">
+<hr>
+    </div>
+    <h3>3. Установка из репозитария AUR.</h3>
+    <div class="main"><p>В Arch Linux кроме официальных репозитариев существует еще пользовательский репозитарий AUR. Pacman не умеет напрямую 
+        устанавливать пакеты из AUR, поэтому используются помощники или же пакеты устанавливаются вручную.</p></div>
+        <div class="main"> <span><p>1. Установка из AUR без помощника.</p></span></div>
+  <div class="main">
+      <hr>
+      <p>Для начала перейдем в <a href="https://aur.archlinux.org/">AUR</a>.
+    И воспользуемся поиском нужного нам пакета.</p>
+    <img src="./img/Screenshot_20210808_203112.png" alt="crome">
+    <p>Скопируем URL для git clone</p>
+    <img src="./img/Screenshot_20210808_203801.png" alt="git_clone">
+    <p>В терминале составим команду <code>$ git clone скопированная_ссылка</code></p>
+    <img src="./img/Screenshot_20210808_204545.png" alt="git_clone">
+    <p>После окончания клонирования перейдём в директорию клонированного пакета</p>
+    <code>$ cd имя_пакета </code>
+    <img src="./img/Screenshot_20210808_205054.png" alt="cd">
+    <p>Для сборки и установки запустим следующую команду:</p>
+    <code>$ makepkg -si</code>
+    <img src="./img/Screenshot_20210808_205833.png" alt="makepkg">
+    <img src="./img/Screenshot_20210808_210034.png" alt="makepkg">
+    <hr>
+  </div>
+  <div class="main"><span><p>2. Установка и из AUR при помощи помощника.</p></span></div>
+  <div class="main"><p>Будем использовать <span>yay</span>.</p></div>
+  <div>
+      <hr>
+      <p>Для установки пакетов из AUR при помощи <span>yay</span> используется следующуя команда:
+      <code>$ yay -S название_пакета1 название_пакета2 ...</code>
+    (можно устанавливать несколько пакетов сразу.) </p>
+    <img src="./img/Screenshot_20210808_213328.png" alt="yay">
+    <img src="./img/Screenshot_20210808_213554.png" alt="yay">
+  </div>
+
+   
+    </div>
+    
+</body>
+</html>
